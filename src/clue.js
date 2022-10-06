@@ -159,8 +159,18 @@ function selectRandom(cardStack) {
     return cardStack[randomCard];
 }
 
+function pickMystery() {
+    const whichSuspect = selectRandom(suspectsArray);
+    const whichWeapon = selectRandom(weaponsArray);
+    const whichRoom = selectRandom(roomsArray);
 
-function pickMystery() { }
+    const selectedMystery = {
+        suspect: whichSuspect,
+        weapon: whichWeapon,
+        room: whichRoom
+    }
+    return selectedMystery;
+}
 
 
 // ITERATION 3
